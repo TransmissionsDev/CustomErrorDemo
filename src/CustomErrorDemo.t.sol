@@ -11,11 +11,15 @@ contract CustomErrorDemoTest is DSTest {
         customerrordemo = new CustomErrorDemo();
     }
 
-    function testFail_basic_sanity() public {
-        assertTrue(false);
+    function test_custom_error1() public {
+        customerrordemo.customError2();
     }
 
-    function test_basic_sanity() public {
-        assertTrue(true);
+    function test_custom_error2() public {
+        customerrordemo.customError1();
+    }
+
+    function test_custom_error3() public {
+        customerrordemo.customError1();
     }
 }
